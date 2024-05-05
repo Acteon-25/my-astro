@@ -54,6 +54,8 @@ ___
 <!-- -->
 
 * [x] Task1
-* [] Task2
-* [] Task3
+* [ ] Task2
+* [ ] Task3
 * [x] Task4
+
+@Acteon-25 :smile: :+1:
