@@ -1,0 +1,54 @@
+---
+import Card from "../components/card.astro"
+import Layout from "../components/layout.astro"
+
+const newTitle = "Nuevo titulo"
+const hobbies = ["Programar","Leer","Escribir","Ver peliculas"]
+const color = "warning"
+const isActive = true
+---
+
+<Layout pageTitle="Pagina Inicial" pageDescription="Esta es una pagina para ofrecer serivico">
+	<h1 class="title">Astro</h1>
+		<h1 class={color}>{hobbies[0]}</h1>
+		<ul>
+			{hobbies.map(hobby=>{
+				return(
+					<li>
+						<h3 class={color}>{hobby}</h3>
+						<button>Like</button>
+					</li>
+				)
+			})}
+		</ul>
+
+		<h3 class="danger">{isActive ? "El usuario esta activo":"El usuario esta desactivado"}</h3>
+		<h3>{isActive && "Es true"}</h3>
+		<h3>{!isActive && "Es false"}</h3>
+
+		<h2>{newTitle}</h2>
+		<Card title="Card 1" text="card text 1"/>
+		<Card title="Card 2" text="card text 2"/>
+		<Card title="Card 3" text="card text 3"/>
+		<Card />
+</Layout>
+
+<script>
+	console.log("Hola mundo")
+</script>
+
+<style>
+	body{
+		background-color: #202020;
+		color: wheat;
+	}
+	.title{
+		color: skyblue;
+	}
+	.warning{
+		color: yellow;
+	}
+	.danger{
+		color: red;
+	}
+</style>
